@@ -1,0 +1,120 @@
+/*Sets the position of the main content of the page (keeps it away from sidebars)*/
+#page-wrap {  
+  margin-left: 90px; 
+  position: relative;
+  margin-top: 55;
+}
+#page-wrap2 {  
+  margin-left: 90px; 
+  margin-right: 90px;
+  position: relative;
+  margin-top: 55;
+  line-height: 125%;
+}
+
+.matrix {
+    position:relative;
+}
+body {
+    padding:20px;
+}
+.matrix:before,.matrix:after {
+    content:"";
+    position:absolute;
+    top:0;
+    border:1px solid #000;
+    width:6px;
+    height:100%;
+}
+.matrix:before {
+    left: -6px;
+    border-right:0px;
+}
+.matrix:after {
+    right: -6px;
+    border-left:0px;
+}
+.matrix td {
+    padding:5px;
+    text-align:center;
+}
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+sub { 
+  top: 0.4em; 
+}
+
+/* Sets the font size of the font h2 */
+h2 {
+    font-size: 5px;
+}
+
+/*sets the attributes of the top bar*/
+ul.topbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Make it stick, even on scroll */
+    top:0;
+    left:0;
+    overflow: auto;
+    z-index:1000
+}
+
+li.topbar {
+    float: left;
+}
+
+li.topbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li.topbar a:hover {
+    background-color: #111;
+}
+/*side sidebar*/
+ul.sidebar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 90px;
+    background-color: #f1f1f1;
+    height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    left:0;
+    top:46;
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+    z-index:1001;
+}
+
+li.sidebar a {
+    display: block;
+    color: #000;
+    padding: 2px 4px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li.sidebar a:hover {
+    background-color: #555;
+    color: white;
+}
+
+a.anchor {
+    position: relative;
+    top: -60px;
+    display: block;
+    visibility: hidden;
+}
